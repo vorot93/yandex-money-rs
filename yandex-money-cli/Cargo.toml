@@ -1,0 +1,27 @@
+[package]
+name = "yandex-money-cli"
+version = "0.1.0"
+description = "Yandex.Money command line tools"
+repository = "https://github.com/vorot93/yandex-money-rs"
+authors = ["Artem Vorotnikov <artem@vorotnikov.me>"]
+categories = ["cli"]
+license = "Apache-2.0"
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "vorot93/yandex-money-rs" }
+maintenance = { status = "actively-developed" }
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+bigdecimal = { version = "0.1", features = ["serde"] }
+env_logger = "0.7"
+phonenumber = "0.2"
+serde = { version = "1", features = ["derive"] }
+structopt = "0.3"
+tokio = { version = "0.2", features = ["full"] }
+tokio-util = { version = "0.2", features = ["full"] }
+toml = "0.5"
+url = "2"
+xdg = "2"
+yandex-money = { version = "0.1", path = "../yandex-money" }
